@@ -78,7 +78,7 @@ export function countArray(array) {
     for (let j = 0; j < keyArr; j++) {
         for (let i = 0; i < array.length; i++) {
             if (array[i] == keyArr[j]) {
-                obj[keyArr[k]] = count++;
+                obj[keyArr[j]] = count++;
             } else {
                 count = 0;
             }
