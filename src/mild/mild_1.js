@@ -72,8 +72,6 @@ export function countArray(array) {
     array.sort();
     var obj = {};
     let keyArr = [new Set(array)];
-    keyArr[0] = array[0];
-    var ind = 0;
     var count = 0;
     for (let j = 0; j < keyArr; j++) {
         for (let i = 0; i < array.length; i++) {
