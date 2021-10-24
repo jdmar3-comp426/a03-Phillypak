@@ -73,11 +73,11 @@ export function countArray(array) {
     array.sort();
     var obj = {};
     
-    for (const element of array) {
-        if (obj[element]) {
-            obj[element] += 1;
+    for (const index of array) {
+        if (obj[index]) {
+            obj[index] += 1;
         } else {
-            obj[element] = 1;
+            obj[index] = 1;
         }
     }
     return obj;
