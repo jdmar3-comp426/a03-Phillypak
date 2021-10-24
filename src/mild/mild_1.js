@@ -75,12 +75,13 @@ export function countArray(array) {
     keyArr[0] = array[0];
     var ind = 0;
     var count = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] == keyArr[ind]) {
-            obj[keyArr[ind]] = count++;
-        } else {
-            count = 0;
-            ind = ind + 1;
+    for (let j = 0; j < keyArr; j++) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == keyArr[j]) {
+                obj[keyArr[k]] = count++;
+            } else {
+                count = 0;
+            }
         }
     }
     return obj;
