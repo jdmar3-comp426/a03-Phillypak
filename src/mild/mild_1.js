@@ -56,9 +56,7 @@ export function maxAndMin(numbers) {
             max = numbers[i];
         }
     }
-    obj["max"] = max;
-    obj["min"] = min;
-    return obj;
+    return "{ max: " + max + ", min: " + min + " }";
 }
 
 /**
@@ -74,8 +72,7 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     array.sort();
     var obj = {};
-    var set = new Set(array);
-    var keyArr = [...set]; //[new Set(array)];
+    const keyArr = array => [...new Set(array)]; //[new Set(array)];
     var count = 0;
     for (let j = 0; j < keyArr; j++) {
         for (let i = 0; i < array.length; i++) {
