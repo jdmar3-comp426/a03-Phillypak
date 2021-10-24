@@ -72,15 +72,12 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     array.sort();
     var obj = {};
-    const keyArr = array => [...new Set(array)]; //[new Set(array)];
-    var count = 0;
-    for (let j = 0; j < keyArr; j++) {
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] == keyArr[j]) {
-                obj[keyArr[j]] = count++;
-            } else {
-                count = 0;
-            }
+    
+    for (const element of array) {
+        if (obj[element]) {
+            obj[element] += 1;
+        } else {
+            obj[element] = 1;
         }
     }
     return obj;
