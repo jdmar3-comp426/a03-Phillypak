@@ -69,5 +69,19 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    array.sort();
+    var obj = {};
+    let keyArr = [new Set(array)];
+    keyArr[0] = array[0];
+    var ind = 0;
+    var count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == keyArr[ind]) {
+            obj[keyArr[ind]] = count++;
+        } else {
+            count = 0;
+            ind = ind + 1;
+        }
+    }
+    return obj;
 }
