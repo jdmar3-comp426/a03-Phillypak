@@ -24,7 +24,10 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   const array1 = [];
+   for (var i = 0; i < array.length; i++) {
+      array1[i] = "{ type: '" + typeof(array[i]) + "', value: '" + array[i] + "' }";
+   }
 }
 
 /**
