@@ -56,6 +56,8 @@ export function maxAndMin(numbers) {
             maxNum = numbers[i];
         }
     }
+    maxNum = Number(maxNum);
+    minNum = Number(minNum);
     obj = {
         max: maxNum,
         min: minNum
