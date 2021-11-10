@@ -6,7 +6,12 @@
  * returns: { type: 'number', value: 4 }
  */
 export function identifyVariable(variable) {
-   return "{ type: '" + typeof(variable) + "', value: '" + variable + "' }";
+//   return "{ type: '" + typeof(variable) + "', value: '" + variable + "' }";
+   let obj = {
+      type: typeof(variable),
+      value: variable
+   }
+   return obj;
 }
 
 
@@ -25,8 +30,13 @@ export function identifyVariable(variable) {
  */
 export function identifyArray(array) {
    const array1 = [];
+
    for (var i = 0; i < array.length; i++) {
-      array1[i] = "{ type: '" + typeof(array[i]) + "', value: '" + array[i] + "' }";
+      let obj = {
+         type: typeof(array[i]),
+         value: array[i]
+      }
+      array1[i]= obj;
    }
    return array1;
 }
