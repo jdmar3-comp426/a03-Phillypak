@@ -50,9 +50,9 @@ export function maxAndMin(numbers) {
     var maxNum = numbers[0];
     var obj = {};
     for (let i = 1; i < numbers.length; i++) {
-        if (numbers[i] < min) {
+        if (numbers[i] < minNum) {
             minNum = numbers[i];
-        } else if (numbers[i] > max) {
+        } else if (numbers[i] > maxNum) {
             maxNum = numbers[i];
         }
     }
