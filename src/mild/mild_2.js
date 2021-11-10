@@ -28,6 +28,7 @@ export function identifyArray(array) {
    for (var i = 0; i < array.length; i++) {
       array1[i] = "{ type: '" + typeof(array[i]) + "', value: '" + array[i] + "' }";
    }
+   return array1;
 }
 
 /**
