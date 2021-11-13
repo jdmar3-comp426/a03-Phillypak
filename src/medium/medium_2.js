@@ -146,9 +146,7 @@ function getMakerHybrids() {
             }
         }
     })
-    mainArray.sort(function(a, b) {
-        return b["hybrids"].length - a["hybrids"].length;
-    })
+    mainArray.sort((a, b) => b["hybrids"].length - a["hybrids"].length)
     return mainArray;
 }
 
