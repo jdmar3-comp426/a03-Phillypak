@@ -162,7 +162,7 @@ function getAvgMpgByYearAndHybrid() {
                     city: [],
                     highway: []
                 },
-                nothybrid: {
+                notHybrid: {
                     city: [],
                     highway: []
                 }
