@@ -170,10 +170,10 @@ function getAvgMpgByYearAndHybrid() {
         }
         if (k.hybrid) {
             obj[k.year]["hybrid"]["city"].push(k.city_mpg);
-            obj[k.year]["hybrid"]["highway"].push(k.highway);
+            obj[k.year]["hybrid"]["highway"].push(k.highway_mpg);
         } else if (!k.hybrid) {
             obj[k.year]["nothybrid"]["city"].push(k.city_mpg);
-            obj[k.year]["nothybrid"]["highway"].push(k.highway);
+            obj[k.year]["nothybrid"]["highway"].push(k.highway_mpg);
         }
     })
 
