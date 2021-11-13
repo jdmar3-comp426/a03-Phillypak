@@ -172,16 +172,16 @@ function getAvgMpgByYearAndHybrid() {
             obj[k.year]["hybrid"]["city"].push(k.city_mpg);
             obj[k.year]["hybrid"]["highway"].push(k.highway_mpg);
         } else if (!k.hybrid) {
-            obj[k.year]["nothybrid"]["city"].push(k.city_mpg);
-            obj[k.year]["nothybrid"]["highway"].push(k.highway_mpg);
+            obj[k.year]["notHybrid"]["city"].push(k.city_mpg);
+            obj[k.year]["notHybrid"]["highway"].push(k.highway_mpg);
         }
     })
 
     for (let key in obj) {
         obj[key]["hybrid"]["city"] = getStatistics(obj[key]["hybrid"]["city"]).mean;
         obj[key]["hybrid"]["highway"] = getStatistics(obj[key]["hybrid"]["highway"]).mean;
-        obj[key]["nothybrid"]["city"] = getStatistics(obj[key]["nothybrid"]["city"]).mean;
-        obj[key]["nothybrid"]["highway"] = getStatistics(obj[key]["nothybrid"]["highway"]).mean;
+        obj[key]["notHybrid"]["city"] = getStatistics(obj[key]["notHybrid"]["city"]).mean;
+        obj[key]["notHybrid"]["highway"] = getStatistics(obj[key]["notHybrid"]["highway"]).mean;
     }
     return obj;
 }
