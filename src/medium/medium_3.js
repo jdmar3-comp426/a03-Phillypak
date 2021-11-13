@@ -48,6 +48,7 @@ export function searchMpg(car_data, minCity, minHighway) {
     arr.sort(function(a, b) {
         return b.highway_mpg - a.highway_mpg;
     })
+    return arr;
 }
 
 
