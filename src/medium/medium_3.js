@@ -61,11 +61,11 @@ export function searchMpg(car_data, minCity, minHighway) {
 export function searchName(car_data, searchTerm) {
     let arr = [];
     car_data.forEach(k => {
-        if (k.id.indexof(searchTerm) != -1) {
+        if (k.id.indexOf(searchTerm) != -1) {
             arr.push(k);
         }
     });
-    arr.sort((a, b) => a.id.indexof(searchTerm) - b.id.indexof(searchTerm))
+    arr.sort((a, b) => a.id.indexOf(searchTerm) - b.id.indexOf(searchTerm))
     return arr;
 }
 
@@ -83,7 +83,7 @@ export function searchByYear(car_data, years) {
     let arr = [];
     car_data.forEach(k => {
         years.forEach(i => {
-            if(k.year == year) {
+            if(k.year == i) {
                 arr.push(k)
             }
         });
