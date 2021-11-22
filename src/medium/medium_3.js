@@ -45,9 +45,7 @@ export function searchMpg(car_data, minCity, minHighway) {
             arr.push(k);
         }
     });
-    arr.sort(function(a, b) {
-        return b.highway_mpg - a.highway_mpg;
-    })
+    arr.sort((a, b) => b.highway_mpg - a.highway_mpg)
     return arr;
 }
 
@@ -61,8 +59,16 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let arr = [];
+    car_data.forEach(k => {
+        if (k.id.indexof(searchTerm) > -1) {
+            arr.push(k);
+        }
+    });
+    arr.sort((a, b) => a.id.indexof(searchTerm) - b.id.indexof(searchTerm))
+    return arr;
 }
+
 
 
 /**
@@ -74,5 +80,14 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let arr = [];
+    car_data.forEach(k => {
+        years.forEach(i => {
+            if(k.year == year) {
+                arr.push(k)
+            }
+        });
+    });
+    arr.sort((a, b) => b.year - a.year)
+    return arr;
 }
